@@ -143,12 +143,12 @@ while running:
 
         sell_bread()
 
-            bread_profit = storage * resale_price
-            budget = budget + bread_profit
-            storage = 0
+        bread_profit = storage * resale_price
+        budget = budget + bread_profit
+        storage = 0
 
-            print(f"You earn €{bread_profit}")
-            print(f"Your new budget is €{budget}")
+        print(f"You earn €{bread_profit}")
+        print(f"Your new budget is €{budget}")
 
         if storage_sell == "no":
             continue
