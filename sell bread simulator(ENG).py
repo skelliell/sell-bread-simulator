@@ -94,21 +94,22 @@ while running:
 
     if bread_action == "sell":
         while True:
-            try:
-                if day_index in (0, 1, 2, 3, 4):
-                    print("maximum price = €3 - €6")
-                elif day_index in (5, 6):
-                    print("maximum price = €4.5 - €7.5")
-
-                resale_price = float(input("At what price per kg do you want to sell the bread? "))
-
-                if resale_price <= max_price_bread:
-                    break
-                else:
-                    print("Your price is too high, try selling at a lower price")
-
-            except ValueError:
-                print("Invalid input! Enter a number.")
+            def sell_bread()
+                try:
+                    if day_index in (0, 1, 2, 3, 4):
+                        print("maximum price = €3 - €6")
+                    elif day_index in (5, 6):
+                        print("maximum price = €4.5 - €7.5")
+    
+                    resale_price = float(input("At what price per kg do you want to sell the bread? "))
+    
+                    if resale_price <= max_price_bread:
+                        break
+                    else:
+                        print("Your price is too high, try selling at a lower price")
+    
+                except ValueError:
+                    print("Invalid input! Enter a number.")
 
         bread_profit = bread * resale_price
         budget = remaining + bread_profit
@@ -140,23 +141,7 @@ while running:
             else:
                 print("Invalid input, type 'yes' or 'no'.")
 
-        if storage_sell == "yes":
-            while True:
-                try:
-                    if day_index in (0, 1, 2, 3, 4):
-                        print("maximum price = €3 - €6")
-                    elif day_index in (5, 6):
-                        print("maximum price = €4.5 - €7.5")
-
-                    resale_price = float(input("At what price per kg do you want to sell the bread? "))
-
-                    if resale_price <= max_price_bread:
-                        break
-                    else:
-                        print("Your price is too high, try selling at a lower price")
-
-                except ValueError:
-                    print("Invalid input! Enter a number.")
+        sell_bread()
 
             bread_profit = storage * resale_price
             budget = budget + bread_profit
