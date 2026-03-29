@@ -118,10 +118,11 @@ while running:
 
     elif bread_action == "eat":
         print("Enjoy your meal!")
+        budget = remaining
 
     elif bread_action == "store":
         storage += bread
-        budget -= total
+        budget -= remaining
         print(f"You now have {storage} kg of bread in storage.")
 
     while True:
@@ -158,7 +159,7 @@ while running:
                     print("Invalid input! Enter a number.")
 
             bread_profit = storage * resale_price
-            budget = remaining + bread_profit
+            budget = budget + bread_profit
             storage = 0
 
             print(f"You earn €{bread_profit}")
