@@ -94,7 +94,7 @@ while running:
 
     if bread_action == "sell":
         while True:
-            def sell_bread()
+            def sell_bread():
                 try:
                     if day_index in (0, 1, 2, 3, 4):
                         print("maximum price = €3 - €6")
